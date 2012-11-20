@@ -9,6 +9,7 @@
 #import "Possession.h"
 
 @implementation Possession
+@synthesize possessionName, serialNumber, valueInDollars, dateCreated;
 
 + (id)randomPossession
 {
@@ -35,35 +36,38 @@
     return pos;
 }
 
-- (void)setPossessionName:(NSString *)str
-{
-    possessionName = str;
-}
-- (NSString *)possessionName
-{
-    return possessionName;
-}
-- (void)setSerialNumber:(NSString *)str
-{
-    serialNumber = str;
-}
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-- (void)setValueInDollars:(int)i
-{
-    valueInDollars = i;
-}
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-- (NSDate *)dateCreated
-{
-    return dateCreated;
-}
-
+//- (void)setPossessionName:(NSString *)str
+//{
+////    [str retain];
+////    [possessionName release];
+////    possessionName = str;
+//    possessionName = str;
+//}
+//- (NSString *)possessionName
+//{
+//    return possessionName;
+//}
+//- (void)setSerialNumber:(NSString *)str
+//{
+//    serialNumber = str;
+//}
+//- (NSString *)serialNumber
+//{
+//    return serialNumber;
+//}
+//- (void)setValueInDollars:(int)i
+//{
+//    valueInDollars = i;
+//}
+//- (int)valueInDollars
+//{
+//    return valueInDollars;
+//}
+//- (NSDate *)dateCreated
+//{
+//    return dateCreated;
+//}
+//
 - (NSString *)description
 {
     NSString *descriptionString = [[NSString alloc]initWithFormat:@"%@ (%@): Worth $%d, recorded on %@", possessionName,
@@ -82,7 +86,8 @@
     if(self)
     {
         [self setPossessionName:name];
-        [self setValueInDollars:value];
+//        [self setPossessionName:name];
+        [self setValueInDollars:&value];
         [self setSerialNumber:sNumber];
         dateCreated = [[NSDate alloc]init];
     }

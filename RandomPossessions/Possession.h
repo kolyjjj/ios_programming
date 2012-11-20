@@ -9,22 +9,27 @@
 #import <Foundation/Foundation.h>
 
 @interface Possession : NSObject
-{
-    NSString *possessionName;
-    NSString *serialNumber;
-    int valueInDollars;
-    NSDate *dateCreated;
-}
-
+//{
+//    NSString *possessionName;
+//    NSString *serialNumber;
+//    int valueInDollars;
+//    NSDate *dateCreated;
+//}
 + (id)randomPossession;
 
-- (void)setPossessionName:(NSString *)str;
-- (NSString *)possessionName;
-- (void)setSerialNumber: (NSString *)str;
-- (NSString *)serialNumber;
-- (void)setValueInDollars:(int)i;
-- (int)valueInDollars;
-- (NSDate *)dateCreated;
+//- (void)setPossessionName:(NSString *)str;
+//- (NSString *)possessionName;
+//- (void)setSerialNumber: (NSString *)str;
+//- (NSString *)serialNumber;
+//- (void)setValueInDollars:(int)i;
+//- (int)valueInDollars;
+//- (NSDate *)dateCreated;
 - (id)initWithPossessionName:(NSString *)name ValueInDollars:(int)value SerialNumber:(NSString *)sNumber;
 - (id)getIsa;
+
+@property (nonatomic, retain) NSString *possessionName;
+@property (nonatomic, retain) NSString *serialNumber;
+@property (nonatomic) int *valueInDollars;
+@property (nonatomic, readonly) NSDate *dateCreated;
+
 @end

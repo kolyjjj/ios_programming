@@ -72,7 +72,6 @@ int main(int argc, const char * argv[])
             NSLog(@"%@\n", [finalArray objectAtIndex:i]);
         }
         
-        
         items = nil;
         
     }
